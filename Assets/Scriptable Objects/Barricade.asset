@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cd24d8fc1b87e04891e9a6d038c88a8, type: 3}
+  m_Name: Barricade
+  m_EditorClassIdentifier: 
+  towerName: Barricade
+  towerDescription: Blocks enemies along the path. Has a limited amount of health
+    before the tower temporarily breaks.
+  towerSprite: {fileID: 21300000, guid: 0525a29fb3ef3f748893a2f1b839ad67, type: 3}
+  towerPrefab: {fileID: 4957955008779954232, guid: 031582e64fa6b9c47a894361e2dbe7ff, type: 3}
+  manaCost: 10
+  placedOnTrack: 1
