@@ -30,7 +30,7 @@ namespace TDTO
                 newMob.transform.position = towers[i].transform.position;
                 newMob.map = this;
                 newMob.nextMap = otherMap;
-                newMob.Init(towers[i].gameObject);
+                newMob.Init(towers[i]);
                 towers[i].gameObject.SetActive(false);
             }
         }

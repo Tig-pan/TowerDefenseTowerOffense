@@ -12,6 +12,7 @@ namespace TDTO
         public MapController enemyMap; // send at night
         public AudioSource gameMusic;
         public AudioClip nightMusic;
+        public AudioClip dayMusic;
 
         public float currentTime = 37.5f; // 45 == enemy send, 15 = player send
         public float timeScale = 0.5f;
@@ -39,6 +40,9 @@ namespace TDTO
             {
                 playerMap.SpawnTowers();
                 playerSends++;
+
+                gameMusic.clip = dayMusic;
+                gameMusic.Play();
             }
 
             timeDial.localRotation = Quaternion.Euler(0, 0, (60.0f - currentTime) * (360.0f / 60.0f));

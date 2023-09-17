@@ -98,10 +98,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f6f3fdba5e724c42b0b48e6d9662f8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 30
-  maxHealth: 30
+  health: 25
+  maxHealth: 25
   speed: 1.7
-  dps: 5
+  dps: 3
   armor: 0
   map: {fileID: 0}
   currentWaypointIndex: 0
@@ -110,6 +110,8 @@ MonoBehaviour:
   deathEffect: {fileID: 0}
   healthFill: {fileID: 6830842535470629996}
   isBlocked: 0
+  slowTimer: 0
+  isRetreating: 0
 --- !u!1 &6372022112141188322
 GameObject:
   m_ObjectHideFlags: 0

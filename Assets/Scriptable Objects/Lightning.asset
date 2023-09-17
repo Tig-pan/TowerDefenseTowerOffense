@@ -20,3 +20,27 @@ MonoBehaviour:
   rangeDisplaySize: 4
   manaCost: 35
   placedOnTrack: 0
+  leftUpgrade:
+    upgradeName: Tesla Coils
+    upgradeDescription: Increases the rate of fire of the lightning tower. Also makes
+      it immune to illusion's distraction aura.
+    manaCost: 20
+    moveSpeedMulti: 1
+    fireRateMulti: 1.4
+    additionalMaxHealth: 0
+    additionalArmor: 0
+    additionalRange: 0
+    slowImmune: 1
+    newProjectile: {fileID: 0}
+  rightUpgrade:
+    upgradeName: Supercharge
+    upgradeDescription: Increases the range and move speed of the tower to ludicruous
+      levels.
+    manaCost: 20
+    moveSpeedMulti: 1.5
+    fireRateMulti: 1
+    additionalMaxHealth: 0
+    additionalArmor: 0
+    additionalRange: 1
+    slowImmune: 0
+    newProjectile: {fileID: 0}

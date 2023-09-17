@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2990298407656579656}
   - component: {fileID: 2990298407656579663}
   - component: {fileID: 1629804096669596141}
+  - component: {fileID: 3126555136418603435}
   m_Layer: 0
   m_Name: Fireball Prefab
   m_TagString: Untagged
@@ -98,7 +99,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   map: {fileID: 0}
-  mobVersion: {fileID: 386689093325472750, guid: 3615f70f25015a44f8e46b850f1cc39d, type: 3}
+  mobVersion: {fileID: 7596055603162339529, guid: 8b1f994bf379f204496425b9da03685e, type: 3}
+  rangeDisplay: 2.5
+  so: {fileID: 11400000, guid: f07c74e5f65e31d42a63b65dfcd07dab, type: 2}
+  leftUpgradeBought: 0
+  rightUpgradeBought: 0
   projectile: {fileID: 5168135897915894740, guid: d1442c58f22a28449b46e0234cb466a6, type: 3}
   shotPeriod: 2.4
   shotRange: 2.6
+--- !u!61 &3126555136418603435
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2990298407656579662}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.4443694}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.25}
+    oldSize: {x: 0.99809533, y: 1.7774775}
+    newSize: {x: 0.96875, y: 1.671875}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.99809533, y: 1.7774775}
+  m_EdgeRadius: 0

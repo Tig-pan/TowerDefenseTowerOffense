@@ -302,7 +302,7 @@ MonoBehaviour:
   health: 40
   maxHealth: 40
   speed: 0.6
-  dps: 4
+  dps: 5
   armor: 0
   map: {fileID: 0}
   currentWaypointIndex: 0

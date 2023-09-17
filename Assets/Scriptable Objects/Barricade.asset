@@ -20,3 +20,26 @@ MonoBehaviour:
   rangeDisplaySize: 0
   manaCost: 10
   placedOnTrack: 1
+  leftUpgrade:
+    upgradeName: Thorns
+    upgradeDescription: Enemies that attack the barricade also deal damage to themselves.
+    manaCost: 10
+    moveSpeedMulti: 1
+    fireRateMulti: 1
+    additionalMaxHealth: 0
+    additionalArmor: 0
+    additionalRange: 0
+    slowImmune: 0
+    newProjectile: {fileID: 0}
+  rightUpgrade:
+    upgradeName: Battering Ram
+    upgradeDescription: Gains a increase in speed and small amount of armor while
+      on offense.
+    manaCost: 5
+    moveSpeedMulti: 1.25
+    fireRateMulti: 1
+    additionalMaxHealth: 0
+    additionalArmor: 1
+    additionalRange: 0
+    slowImmune: 0
+    newProjectile: {fileID: 0}

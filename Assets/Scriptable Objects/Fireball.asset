@@ -20,3 +20,25 @@ MonoBehaviour:
   rangeDisplaySize: 2.5
   manaCost: 25
   placedOnTrack: 0
+  leftUpgrade:
+    upgradeName: Bigger Fireballs
+    upgradeDescription: Shoots larger fireballs that explode larger and deal more
+      damage.
+    manaCost: 10
+    moveSpeedMulti: 1
+    fireRateMulti: 1
+    additionalMaxHealth: 0
+    additionalArmor: 0
+    additionalRange: 0
+    newProjectile: {fileID: 6667848741853737003, guid: a8db701b56c7e4f45be2d5ce33a16753, type: 3}
+  rightUpgrade:
+    upgradeName: Internal Inferno
+    upgradeDescription: Heats up the tower so now it shoots and moves much faster,
+      but with a smaller range.
+    manaCost: 15
+    moveSpeedMulti: 1.5
+    fireRateMulti: 1.8
+    additionalMaxHealth: 0
+    additionalArmor: 0
+    additionalRange: -0.5
+    newProjectile: {fileID: 0}

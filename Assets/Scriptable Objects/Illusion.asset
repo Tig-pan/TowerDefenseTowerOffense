@@ -14,9 +14,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerName: Illusion
   towerDescription: 'Distracts nearby enemies making them move 40% slower. Inspires
-    nearby allies healing them slowly over time. '
+    up to 3 nearby allies healing them slowly over time. '
   towerSprite: {fileID: 21300000, guid: f60745c740aea1e4383c8e2541b077f9, type: 3}
   towerPrefab: {fileID: 7095397119092940009, guid: 81fcfa7e31e7b614babd1423dc09d769, type: 3}
-  rangeDisplaySize: 1.6
+  rangeDisplaySize: 1.5
   manaCost: 30
   placedOnTrack: 0
+  leftUpgrade:
+    upgradeName: Positive Energies
+    upgradeDescription: Almost doubles the range of the distraction aura.
+    manaCost: 15
+    moveSpeedMulti: 1
+    fireRateMulti: 1
+    additionalMaxHealth: 0
+    additionalArmor: 0
+    additionalRange: 1
+    newProjectile: {fileID: 0}
+  rightUpgrade:
+    upgradeName: Energetic Trance
+    upgradeDescription: Doubles the strength of the healing inspiration aura. Also
+      increases max health but reduces move speed.
+    manaCost: 15
+    moveSpeedMulti: 0.9
+    fireRateMulti: 1
+    additionalMaxHealth: 10
+    additionalArmor: 0
+    additionalRange: 0
+    newProjectile: {fileID: 0}

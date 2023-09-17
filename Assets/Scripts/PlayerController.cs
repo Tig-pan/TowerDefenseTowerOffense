@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Tilemaps;
+using Unity.Burst.CompilerServices;
 
 namespace TDTO
 {
@@ -17,6 +18,8 @@ namespace TDTO
         public TMP_Text cancelPlacementText;
         public SpriteRenderer ghostPiece;
         public Transform ghostPieceRangeDisplay;
+        public Transform rangeDisplay;
+        public InfoUpgradeDisplay display;
         [Header("Tilemap")]
         public Tilemap regularPlacement;
         public Tilemap pathPlacement;
@@ -49,12 +52,45 @@ namespace TDTO
             {
                 DoTowerPlacement();
             }
+            else
+            {
+                DoTowerHoverClick();
+            }
 
             UpdateManaUI();
         }
 
+        void DoTowerHoverClick()
+        {
+            Vector2 point = playerCamera.ScreenToWorldPoint(Input.mousePosition);
+
+            Collider2D col = Physics2D.OverlapPoint(point);
+            if (col == null)
+            {
+                rangeDisplay.gameObject.SetActive(false);
+                return;
+            }
+
+            Tower tower = col.GetComponent<Tower>();
+            if (tower == null || tower.map != playerMap)
+            {
+                return;
+            }
+
+            rangeDisplay.gameObject.SetActive(true);
+            rangeDisplay.localScale = new Vector3(tower.rangeDisplay * 2.0f, tower.rangeDisplay * 2.0f, 1.0f);
+            rangeDisplay.transform.position = col.transform.position;
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                display.ShowUpgrades(tower);
+            }
+        }
+
         void DoTowerPlacement()
         {
+            rangeDisplay.gameObject.SetActive(false);
+
             Vector3 worldPoint = playerCamera.ScreenToWorldPoint(Input.mousePosition);
             Vector3Int cellPos = currentlyPlacingTilemap.WorldToCell(worldPoint);
 
@@ -127,7 +163,7 @@ namespace TDTO
             }
         }
 
-        private void UpdateManaUI()
+        public void UpdateManaUI()
         {
             manaSlider.maxValue = maxMana;
             manaSlider.value = mana;

@@ -8,6 +8,7 @@ namespace TDTO
     {
         public float health;
         public float maxHealth;
+        public bool isFinalCastle;
         [Space(5)]
         public Transform healthFill;
 
@@ -28,7 +29,15 @@ namespace TDTO
                     }
                     else
                     {
+                        int healthBefore = (int)health;
                         health -= currentlyBlocking[i].dps * Time.deltaTime;
+                        int healthAfter = (int)health;
+
+                        if (leftUpgradeBought && healthAfter != healthBefore) // spikes/thorns
+                        {
+                            currentlyBlocking[i].Damage(healthBefore - healthAfter, true);
+                        }
+
                         healthFill.transform.localScale = new Vector3(health / maxHealth, 1, 1);
 
                         if (health <= 0)

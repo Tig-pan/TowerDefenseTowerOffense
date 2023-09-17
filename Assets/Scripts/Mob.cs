@@ -31,6 +31,8 @@ namespace TDTO
         private Vector3 retreatPosition;
         private float retreatIndex;
 
+        private bool isSlowImmune;
+
         [HideInInspector()]
         public float slowTimer;
         [HideInInspector()]
@@ -38,12 +40,37 @@ namespace TDTO
 
         private static readonly float slowSpeed = 0.6f;
 
-        public void Init(GameObject pairedTower)
+        public void Init(Tower pairedTower)
         {
-            originalTower = pairedTower;
+            originalTower = pairedTower.gameObject;
             enteringPath = true;
 
             enterPathDistance = 9001f;
+
+            HealAllies healing = GetComponent<HealAllies>();
+
+            if (pairedTower.leftUpgradeBought)
+            {
+                health += pairedTower.so.leftUpgrade.additionalMaxHealth;
+                maxHealth += pairedTower.so.leftUpgrade.additionalMaxHealth;
+
+                speed *= pairedTower.so.leftUpgrade.moveSpeedMulti;
+                armor += pairedTower.so.leftUpgrade.additionalArmor;
+
+                isSlowImmune = isSlowImmune || pairedTower.so.leftUpgrade.slowImmune;
+            }
+
+            if (pairedTower.rightUpgradeBought)
+            {
+                health += pairedTower.so.rightUpgrade.additionalMaxHealth;
+                maxHealth += pairedTower.so.rightUpgrade.additionalMaxHealth;
+
+                speed *= pairedTower.so.rightUpgrade.moveSpeedMulti;
+                armor += pairedTower.so.rightUpgrade.additionalArmor;
+
+                healing.amountToHeal *= 2;
+                isSlowImmune = isSlowImmune || pairedTower.so.rightUpgrade.slowImmune;
+            }
 
             for (int i = 0; i < map.movementWaypoints.Length - 1; i++)
             {
@@ -113,9 +140,9 @@ namespace TDTO
             return true;
         }
 
-        public void Damage(int baseDamage)
+        public void Damage(int baseDamage, bool ignoreArmor = false)
         {
-            health -= Mathf.Max(baseDamage - armor, 0);
+            health -= Mathf.Max(baseDamage - (ignoreArmor ? 0 : armor), 0);
 
             healthFill.localScale = new Vector3(health / (float)maxHealth, 1.0f, 1.0f);
 
@@ -151,7 +178,7 @@ namespace TDTO
 
             slowTimer -= Time.deltaTime;
 
-            float delta = speed * Time.deltaTime * (map != nextMap && !isRetreating ? 1.5f : 1.0f) * (slowTimer > 0.0f ? slowSpeed : 1.0f);
+            float delta = speed * Time.deltaTime * (map != nextMap && !isRetreating ? 1.75f : 1.0f) * (slowTimer > 0.0f && !isSlowImmune ? slowSpeed : 1.0f);
             if (isRetreating)
             {
                 if (currentWaypointIndex > retreatIndex)
