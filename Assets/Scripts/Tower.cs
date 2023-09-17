@@ -6,6 +6,7 @@ namespace TDTO
 {
     public class Tower : MonoBehaviour
     {
+        public MapController map;
         public Mob mobVersion; // is instantiated
     }
 }

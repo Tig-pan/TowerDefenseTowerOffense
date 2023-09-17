@@ -12,6 +12,7 @@ namespace TDTO
         public string towerDescription;
         public Sprite towerSprite;
         public Tower towerPrefab;
+        public float rangeDisplaySize;
         public int manaCost;
         public bool placedOnTrack;
     }

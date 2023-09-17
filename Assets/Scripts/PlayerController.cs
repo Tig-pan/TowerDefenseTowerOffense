@@ -16,6 +16,7 @@ namespace TDTO
         public GameObject enemyPlacementArea;
         public TMP_Text cancelPlacementText;
         public SpriteRenderer ghostPiece;
+        public Transform ghostPieceRangeDisplay;
         [Header("Tilemap")]
         public Tilemap regularPlacement;
         public Tilemap pathPlacement;
@@ -28,7 +29,6 @@ namespace TDTO
         public TMP_Text manaCountText;
         public TMP_Text manaGainText;
         public float manaGainPerSecond;
-        public int manaGainPerNightfall;
 
         private float manaGainTimer;
         private Tilemap currentlyPlacingTilemap;
@@ -49,6 +49,8 @@ namespace TDTO
             {
                 DoTowerPlacement();
             }
+
+            UpdateManaUI();
         }
 
         void DoTowerPlacement()
@@ -68,6 +70,7 @@ namespace TDTO
 
                     Tower newTower = Instantiate(currentlyPlacingTower.towerPrefab, playerMap.transform);
                     newTower.transform.position = ghostPiece.transform.position;
+                    newTower.map = playerMap;
 
                     playerMap.towers.Add(newTower);
                     currentlyPlacingTilemap.SetTile(cellPos, cannotPlaceTile);
@@ -101,6 +104,7 @@ namespace TDTO
             {
                 currentlyPlacingTower = tower;
                 ghostPiece.sprite = tower.towerSprite;
+                ghostPieceRangeDisplay.transform.localScale = new Vector3(2.0f * tower.rangeDisplaySize, 2.0f * tower.rangeDisplaySize, 1.0f);
 
                 regularPlacement.gameObject.SetActive(!tower.placedOnTrack);
                 pathPlacement.gameObject.SetActive(tower.placedOnTrack);
@@ -129,7 +133,7 @@ namespace TDTO
             manaSlider.value = mana;
 
             manaCountText.text = "Mana: " + mana + "/" + maxMana;
-            manaGainText.text = "+" + manaGainPerSecond + " mana/second\n+" + manaGainPerNightfall + " mana at nightfall";
+            manaGainText.text = "+" + manaGainPerSecond + " mana/second\n(upgrade castle for more)";
         }
     }
 }

@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1cd24d8fc1b87e04891e9a6d038c88a8, type: 3}
-  m_Name: Alchemy
+  m_Name: Fireball
   m_EditorClassIdentifier: 
-  towerName: Alchemy
-  towerDescription: A good all-around tower. Hits up to 2 targets in it's splash
-    for low damage.
-  towerSprite: {fileID: 21300000, guid: fc469c845f69a9e40975be62ff0d43d3, type: 3}
-  towerPrefab: {fileID: 7282831764656508950, guid: b40d09598eabd9f40b16904df633bc19, type: 3}
-  rangeDisplaySize: 2
-  manaCost: 15
+  towerName: Fireball
+  towerDescription: Shoots a medium damage fireball that can hit up to 5 units. Very
+    strong and durable on offense.
+  towerSprite: {fileID: 21300000, guid: b0fb6b0434787cc46a1dc620400b70f7, type: 3}
+  towerPrefab: {fileID: 1629804096669596141, guid: 7ba7125b4374171469d3f3a08dd8fde6, type: 3}
+  rangeDisplaySize: 2.5
+  manaCost: 25
   placedOnTrack: 0

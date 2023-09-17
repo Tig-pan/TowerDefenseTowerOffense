@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerName: Barricade
   towerDescription: Blocks enemies along the path. Has a limited amount of health
-    before the tower temporarily breaks.
-  towerSprite: {fileID: 21300000, guid: 0525a29fb3ef3f748893a2f1b839ad67, type: 3}
-  towerPrefab: {fileID: 4957955008779954232, guid: 031582e64fa6b9c47a894361e2dbe7ff, type: 3}
+    before the tower breaks for the day.
+  towerSprite: {fileID: 21300000, guid: 1a360007283531f4f9d3c8625f9568b4, type: 3}
+  towerPrefab: {fileID: 2424372674617911775, guid: 031582e64fa6b9c47a894361e2dbe7ff, type: 3}
+  rangeDisplaySize: 0
   manaCost: 10
   placedOnTrack: 1
