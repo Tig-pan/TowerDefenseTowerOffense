@@ -99,8 +99,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   map: {fileID: 0}
   splashEffect: {fileID: 0}
-  damage: 6
-  maxSplashTargets: 7
+  damage: 5
+  maxSplashTargets: 5
   splashRadius: 1.2
   projectileSpeed: 6.5
   target: {x: 0, y: 0, z: 0}

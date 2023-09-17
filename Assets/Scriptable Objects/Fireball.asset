@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Fireball
   m_EditorClassIdentifier: 
   towerName: Fireball
-  towerDescription: Shoots a medium damage fireball that can hit up to 5 units. Very
+  towerDescription: Shoots a medium damage fireball that can hit up to 4 units. Very
     strong and durable on offense.
   towerSprite: {fileID: 21300000, guid: b0fb6b0434787cc46a1dc620400b70f7, type: 3}
   towerPrefab: {fileID: 1629804096669596141, guid: 7ba7125b4374171469d3f3a08dd8fde6, type: 3}
@@ -27,9 +27,13 @@ MonoBehaviour:
     manaCost: 10
     moveSpeedMulti: 1
     fireRateMulti: 1
+    dpsMulti: 1
     additionalMaxHealth: 0
     additionalArmor: 0
     additionalRange: 0
+    additionalIncome: 0
+    slowImmune: 0
+    slowResistance: 0
     newProjectile: {fileID: 6667848741853737003, guid: a8db701b56c7e4f45be2d5ce33a16753, type: 3}
   rightUpgrade:
     upgradeName: Internal Inferno
@@ -37,8 +41,12 @@ MonoBehaviour:
       but with a smaller range.
     manaCost: 15
     moveSpeedMulti: 1.5
-    fireRateMulti: 1.8
+    fireRateMulti: 1.65
+    dpsMulti: 1
     additionalMaxHealth: 0
     additionalArmor: 0
     additionalRange: -0.5
+    additionalIncome: 0
+    slowImmune: 0
+    slowResistance: 0
     newProjectile: {fileID: 0}

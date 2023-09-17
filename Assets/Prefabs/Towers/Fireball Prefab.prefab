@@ -196,7 +196,7 @@ MonoBehaviour:
   rightUpgradeBought: 0
   fireSound: {fileID: 5478659727813367031}
   projectile: {fileID: 5168135897915894740, guid: d1442c58f22a28449b46e0234cb466a6, type: 3}
-  shotPeriod: 2.6
+  shotPeriod: 2.8
   shotRange: 2.6
 --- !u!61 &3126555136418603435
 BoxCollider2D:

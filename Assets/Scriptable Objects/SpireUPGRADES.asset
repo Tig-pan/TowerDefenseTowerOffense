@@ -23,25 +23,29 @@ MonoBehaviour:
     upgradeName: Ancient Library
     upgradeDescription: Aquire a large library of ancient tomes. It increases your
       mana/second by 0.5.
-    manaCost: 25
+    manaCost: 30
     moveSpeedMulti: 1
     fireRateMulti: 1
+    dpsMulti: 1
     additionalMaxHealth: 0
     additionalArmor: 0
     additionalRange: 0
     additionalIncome: 0.5
     slowImmune: 0
+    slowResistance: 0
     newProjectile: {fileID: 0}
   rightUpgrade:
     upgradeName: Astrological Alignment
     upgradeDescription: Exercise your cosmic will to align the stars in your favor.
       Gain 1 mana/second.
-    manaCost: 50
+    manaCost: 60
     moveSpeedMulti: 1
     fireRateMulti: 1
+    dpsMulti: 1
     additionalMaxHealth: 0
     additionalArmor: 0
     additionalRange: 0
     additionalIncome: 1
     slowImmune: 0
+    slowResistance: 0
     newProjectile: {fileID: 0}

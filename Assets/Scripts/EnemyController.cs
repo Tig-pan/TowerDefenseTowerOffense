@@ -79,7 +79,7 @@ namespace TDTO
                     }
                 }
             }
-            else // attempt building
+            else if (options.Count > 0) // attempt building
             {
                 int index = Random.Range(0, options.Count);
 

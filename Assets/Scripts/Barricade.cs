@@ -8,6 +8,9 @@ namespace TDTO
     {
         public float health;
         public float maxHealth;
+        public Sprite healthy;
+        public Sprite dead;
+        public SpriteRenderer sprite;
         public bool isFinalCastle;
         [Space(5)]
         public GameObject healthBar;
@@ -75,10 +78,18 @@ namespace TDTO
 
             healthBar.SetActive(true);
             healthFill.transform.localScale = new Vector3(1, 1, 1);
+            if (sprite != null)
+            {
+                sprite.sprite = healthy;
+            }
         }
 
         void OnDeath()
         {
+            if (sprite != null)
+            {
+                sprite.sprite = dead;
+            }
             healthBar.SetActive(false);
             for (int i = 0; i < currentlyBlocking.Count; i++)
             {

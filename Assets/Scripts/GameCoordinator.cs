@@ -20,6 +20,19 @@ namespace TDTO
         private int enemySends = 0;
         private int playerSends = 0;
 
+        public void SetEternalNight()
+        {
+            currentTime = 45.0f;
+
+            if (timeDial != null)
+            {
+                timeDial.localRotation = Quaternion.Euler(0, 0, (60.0f - currentTime) * (360.0f / 60.0f));
+            }
+            darknessSprite.color = new Color(0, 0, 0, 0.2f + 0.2f * Mathf.Cos((currentTime - 45.0f) * (Mathf.PI / 30.0f)));
+
+            this.enabled = false;
+        }
+
         private void Update()
         {
             currentTime += Time.deltaTime * timeScale;
@@ -33,29 +46,38 @@ namespace TDTO
                 enemyMap.SpawnTowers();
                 enemySends++;
 
-                gameMusic.clip = nightMusic;
-                gameMusic.Play();   
+                if (gameMusic != null)
+                {
+                    gameMusic.clip = nightMusic;
+                    gameMusic.Play();
+                }
             }
             if (currentTime >= 15.0f && currentTime < 45.0f && (playerSends < enemySends))
             {
                 playerMap.SpawnTowers();
                 playerSends++;
 
-                gameMusic.clip = dayMusic;
-                gameMusic.Play();
+                if (gameMusic != null)
+                {
+                    gameMusic.clip = dayMusic;
+                    gameMusic.Play();
+                }
             }
 
-            timeDial.localRotation = Quaternion.Euler(0, 0, (60.0f - currentTime) * (360.0f / 60.0f));
+            if (timeDial != null)
+            {
+                timeDial.localRotation = Quaternion.Euler(0, 0, (60.0f - currentTime) * (360.0f / 60.0f));
+            }
             darknessSprite.color = new Color(0, 0, 0, 0.2f + 0.2f * Mathf.Cos((currentTime - 45.0f) * (Mathf.PI / 30.0f)));
 
-            if (Input.GetKeyDown(KeyCode.Minus))
+            /*if (Input.GetKeyDown(KeyCode.Minus))
             {
                 playerMap.SpawnTowers();
             }
             if (Input.GetKeyDown(KeyCode.Equals))
             {
                 enemyMap.SpawnTowers();
-            }
+            }*/
         }
     }
 }
