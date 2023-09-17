@@ -20,6 +20,7 @@ namespace TDTO
         public Transform ghostPieceRangeDisplay;
         public Transform rangeDisplay;
         public InfoUpgradeDisplay display;
+        public AudioSource buildNoise;
         [Header("Tilemap")]
         public Tilemap regularPlacement;
         public Tilemap pathPlacement;
@@ -103,6 +104,8 @@ namespace TDTO
                 {
                     mana -= currentlyPlacingTower.manaCost;
                     UpdateManaUI();
+
+                    buildNoise.Play();
 
                     Tower newTower = Instantiate(currentlyPlacingTower.towerPrefab, playerMap.transform);
                     newTower.transform.position = ghostPiece.transform.position;

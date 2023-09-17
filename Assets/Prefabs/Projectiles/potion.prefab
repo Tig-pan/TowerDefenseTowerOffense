@@ -101,6 +101,6 @@ MonoBehaviour:
   splashEffect: {fileID: 0}
   damage: 2
   maxSplashTargets: 2
-  splashRadius: 0.5
-  projectileSpeed: 6
+  splashRadius: 0.75
+  projectileSpeed: 7
   target: {x: 0, y: 0, z: 0}

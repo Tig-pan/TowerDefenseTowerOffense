@@ -22,6 +22,7 @@ namespace TDTO
         public GameObject deathEffect;
         public GameObject healthBar;
         public Transform healthFill;
+        public AudioSource hurtEffect;
         [Space(5)]
         public bool isBlocked;
 
@@ -41,7 +42,7 @@ namespace TDTO
         [HideInInspector()]
         public bool isRetreating;
 
-        private static readonly float slowSpeed = 0.6f;
+        private static readonly float slowSpeed = 0.6667f;
 
         public void Init(Tower pairedTower)
         {
@@ -154,6 +155,7 @@ namespace TDTO
         {
             health -= Mathf.Max(baseDamage - (ignoreArmor ? 0 : armor), 0);
 
+            hurtEffect.Play();
             healthFill.localScale = new Vector3(health / (float)maxHealth, 1.0f, 1.0f);
 
             if (health <= 0.0f)
@@ -188,7 +190,7 @@ namespace TDTO
 
             slowTimer -= Time.deltaTime;
 
-            float delta = speed * Time.deltaTime * (map != nextMap && !isRetreating ? 1.75f : 1.0f) * (slowTimer > 0.0f && !isSlowImmune ? slowSpeed : 1.0f);
+            float delta = speed * Time.deltaTime * (map != nextMap && !isRetreating ? 2.0f : 1.0f) * (slowTimer > 0.0f && !isSlowImmune ? (isSlowResistant ? (1.0f + slowSpeed) * 0.5f: slowSpeed) : 1.0f);
             if (isRetreating)
             {
                 if (currentWaypointIndex > retreatIndex && map == nextMap)

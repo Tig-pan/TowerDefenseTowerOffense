@@ -34,7 +34,7 @@ namespace TDTO
                         health -= (isFinalCastle ? currentlyBlocking[i].finalCastleDps : currentlyBlocking[i].dps) * Time.deltaTime;
                         int healthAfter = (int)health;
 
-                        if (leftUpgradeBought && healthAfter != healthBefore) // spikes/thorns
+                        if (leftUpgradeBought && !isFinalCastle && healthAfter != healthBefore) // spikes/thorns
                         {
                             currentlyBlocking[i].Damage(healthBefore - healthAfter, true);
                         }
@@ -74,6 +74,7 @@ namespace TDTO
             currentlyBlocking.Clear();
 
             healthBar.SetActive(true);
+            healthFill.transform.localScale = new Vector3(1, 1, 1);
         }
 
         void OnDeath()

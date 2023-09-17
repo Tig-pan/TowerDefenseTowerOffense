@@ -102,5 +102,5 @@ MonoBehaviour:
   damage: 6
   maxSplashTargets: 7
   splashRadius: 1.2
-  projectileSpeed: 5
+  projectileSpeed: 6.5
   target: {x: 0, y: 0, z: 0}

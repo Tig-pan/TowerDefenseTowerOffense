@@ -55,7 +55,7 @@ namespace TDTO
 
         void AttemptDecision()
         {
-            if (Random.value < 0.5f) // attempt upgrade
+            if (Random.value < 0.3f) // attempt upgrade
             {
                 int index = Random.Range(0, enemyMap.towers.Count);
                 Tower upgradeTower = enemyMap.towers[index];
@@ -103,6 +103,8 @@ namespace TDTO
                     newTower.transform.position = options[index].position;
                     newTower.map = enemyMap;
                     options.RemoveAt(index);
+
+                    enemyMap.towers.Add(newTower);
                 }
             }
         }

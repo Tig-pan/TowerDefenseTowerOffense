@@ -42,7 +42,7 @@ MonoBehaviour:
     moveSpeedMulti: 1
     fireRateMulti: 1
     dpsMulti: 1
-    additionalMaxHealth: 5
+    additionalMaxHealth: 8
     additionalArmor: 1
     additionalRange: 0
     additionalIncome: 0

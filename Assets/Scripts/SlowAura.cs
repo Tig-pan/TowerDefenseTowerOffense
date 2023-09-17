@@ -6,6 +6,7 @@ namespace TDTO
 {
     public class SlowAura : Tower
     {
+        public AudioSource fireSound;
         public float pulsePeriod = 0.1f;
         public float auraRange = 1.25f;
 
@@ -26,6 +27,11 @@ namespace TDTO
                     if (distance <= auraRange)
                     {
                         map.enemyMobs[i].slowTimer = pulsePeriod + 0.01f;
+
+                        if (!fireSound.isPlaying)
+                        {
+                            fireSound.Play();
+                        }
                     }
                 }
             }

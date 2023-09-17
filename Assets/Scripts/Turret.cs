@@ -6,6 +6,7 @@ namespace TDTO
 {
     public class Turret : Tower
     {
+        public AudioSource fireSound;
         public Projectile projectile;
         public float shotPeriod;
         public float shotRange;
@@ -38,6 +39,8 @@ namespace TDTO
                     Projectile newProjectile = Instantiate(projectile, transform.position, Quaternion.identity);
                     newProjectile.target = closest.transform.position;
                     newProjectile.map = map;
+
+                    fireSound?.Play();
                 }
             }
         }

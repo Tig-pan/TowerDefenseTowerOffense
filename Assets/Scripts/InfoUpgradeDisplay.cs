@@ -11,6 +11,7 @@ namespace TDTO
         public GameObject infoDisplay;
         public GameObject upgradeDisplay;
         public PlayerController playerController;
+        public AudioSource upgradeNoise;
         [Header("Info")]
         public TMP_Text infoName;
         public TMP_Text infoCost;
@@ -98,6 +99,8 @@ namespace TDTO
                 leftUpgradeButton.image.sprite = soldButton;
                 leftUpgradeButton.interactable = false;
 
+                upgradeNoise.Play();
+
                 ApplyUpgrade(upgradeTower.so.leftUpgrade);
             }
         }
@@ -113,6 +116,8 @@ namespace TDTO
 
                 rightUpgradeButton.image.sprite = soldButton;
                 rightUpgradeButton.interactable = false;
+
+                upgradeNoise.Play();
 
                 ApplyUpgrade(upgradeTower.so.rightUpgrade);
             }
