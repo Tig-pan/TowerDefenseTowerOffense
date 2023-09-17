@@ -41,7 +41,7 @@ namespace TDTO
             infoDisplay.SetActive(true);
             upgradeDisplay.SetActive(false);
 
-            infoName.text = tower.name + ":";
+            infoName.text = tower.towerName + ":";
             infoCost.text = "Cost: " + tower.manaCost + " mana";
             infoDescription.text = tower.towerDescription;
         }

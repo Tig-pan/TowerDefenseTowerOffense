@@ -12,6 +12,7 @@ namespace TDTO
         public InfoUpgradeDisplay infoUpgradeDisplay;
         public TowerSO tower;
         public Button button;
+        public bool isLocked;
         [Space(10)]
         public Image[] border;
 
@@ -20,12 +21,23 @@ namespace TDTO
 
         private void Update()
         {
-            bool hasEnoughMana = playerController.mana >= tower.manaCost;
-
-            button.interactable = hasEnoughMana;
-            for (int i = 0; i < border.Length; i++)
+            if (isLocked)
             {
-                border[i].color = hasEnoughMana ? canAfford : tooPoor;
+                button.interactable = false;
+                for (int i = 0; i < border.Length; i++)
+                {
+                    border[i].color = tooPoor;
+                }
+            }
+            else
+            {
+                bool hasEnoughMana = playerController.mana >= tower.manaCost;
+
+                button.interactable = hasEnoughMana;
+                for (int i = 0; i < border.Length; i++)
+                {
+                    border[i].color = hasEnoughMana ? canAfford : tooPoor;
+                }
             }
         }
 

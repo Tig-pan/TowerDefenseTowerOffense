@@ -15279,7 +15279,11 @@ PrefabInstance:
     - target: {fileID: 5623420197040761633, guid: 92e5d064a4d689249ace2a0654dd4a8d, type: 3}
       propertyPath: tower
       value: 
-      objectReference: {fileID: 11400000, guid: 283de1b85688b2c40bd21e8b5c1301bf, type: 2}
+      objectReference: {fileID: 11400000, guid: e3601769e111e8b4a99b67086d1e3d0d, type: 2}
+    - target: {fileID: 5623420197040761633, guid: 92e5d064a4d689249ace2a0654dd4a8d, type: 3}
+      propertyPath: isLocked
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5623420197040761633, guid: 92e5d064a4d689249ace2a0654dd4a8d, type: 3}
       propertyPath: playerController
       value: 
@@ -15290,7 +15294,7 @@ PrefabInstance:
       objectReference: {fileID: 1181122193}
     - target: {fileID: 5623420197040761634, guid: 92e5d064a4d689249ace2a0654dd4a8d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5623420197040761634, guid: 92e5d064a4d689249ace2a0654dd4a8d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -15315,10 +15319,22 @@ PrefabInstance:
     - target: {fileID: 5623420197040761634, guid: 92e5d064a4d689249ace2a0654dd4a8d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 11400000, guid: 283de1b85688b2c40bd21e8b5c1301bf, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 5623420197040761634, guid: 92e5d064a4d689249ace2a0654dd4a8d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: TDTO.TowerSO, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5623420197040761636, guid: 92e5d064a4d689249ace2a0654dd4a8d, type: 3}
+      propertyPath: m_Color.b
+      value: 0.3490566
+      objectReference: {fileID: 0}
+    - target: {fileID: 5623420197040761636, guid: 92e5d064a4d689249ace2a0654dd4a8d, type: 3}
+      propertyPath: m_Color.g
+      value: 0.23182628
+      objectReference: {fileID: 0}
+    - target: {fileID: 5623420197040761636, guid: 92e5d064a4d689249ace2a0654dd4a8d, type: 3}
+      propertyPath: m_Color.r
+      value: 0.20251869
       objectReference: {fileID: 0}
     - target: {fileID: 5623420197040761637, guid: 92e5d064a4d689249ace2a0654dd4a8d, type: 3}
       propertyPath: m_Pivot.x
@@ -15412,17 +15428,21 @@ PrefabInstance:
       propertyPath: m_text
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 5623420197574010572, guid: 92e5d064a4d689249ace2a0654dd4a8d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5623420197858853844, guid: 92e5d064a4d689249ace2a0654dd4a8d, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: aa0eeffc6be8c5043a78cfa9c5d67df8, type: 3}
+      objectReference: {fileID: 21300000, guid: 1e819f75698abf94c92e894d0a213da4, type: 3}
     - target: {fileID: 5623420197858853845, guid: 92e5d064a4d689249ace2a0654dd4a8d, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 85
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 5623420197858853845, guid: 92e5d064a4d689249ace2a0654dd4a8d, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 75
+      value: 90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92e5d064a4d689249ace2a0654dd4a8d, type: 3}
@@ -16344,7 +16364,11 @@ PrefabInstance:
     - target: {fileID: 5623420197040761633, guid: 92e5d064a4d689249ace2a0654dd4a8d, type: 3}
       propertyPath: tower
       value: 
-      objectReference: {fileID: 11400000, guid: babab383e175503428294f07b45cdb01, type: 2}
+      objectReference: {fileID: 11400000, guid: e3601769e111e8b4a99b67086d1e3d0d, type: 2}
+    - target: {fileID: 5623420197040761633, guid: 92e5d064a4d689249ace2a0654dd4a8d, type: 3}
+      propertyPath: isLocked
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5623420197040761633, guid: 92e5d064a4d689249ace2a0654dd4a8d, type: 3}
       propertyPath: playerController
       value: 
@@ -16355,7 +16379,7 @@ PrefabInstance:
       objectReference: {fileID: 1181122193}
     - target: {fileID: 5623420197040761634, guid: 92e5d064a4d689249ace2a0654dd4a8d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5623420197040761634, guid: 92e5d064a4d689249ace2a0654dd4a8d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -16380,10 +16404,22 @@ PrefabInstance:
     - target: {fileID: 5623420197040761634, guid: 92e5d064a4d689249ace2a0654dd4a8d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 11400000, guid: babab383e175503428294f07b45cdb01, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 5623420197040761634, guid: 92e5d064a4d689249ace2a0654dd4a8d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: TDTO.TowerSO, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5623420197040761636, guid: 92e5d064a4d689249ace2a0654dd4a8d, type: 3}
+      propertyPath: m_Color.b
+      value: 0.3490566
+      objectReference: {fileID: 0}
+    - target: {fileID: 5623420197040761636, guid: 92e5d064a4d689249ace2a0654dd4a8d, type: 3}
+      propertyPath: m_Color.g
+      value: 0.23182628
+      objectReference: {fileID: 0}
+    - target: {fileID: 5623420197040761636, guid: 92e5d064a4d689249ace2a0654dd4a8d, type: 3}
+      propertyPath: m_Color.r
+      value: 0.20251869
       objectReference: {fileID: 0}
     - target: {fileID: 5623420197040761637, guid: 92e5d064a4d689249ace2a0654dd4a8d, type: 3}
       propertyPath: m_Pivot.x
@@ -16477,13 +16513,17 @@ PrefabInstance:
       propertyPath: m_text
       value: 35
       objectReference: {fileID: 0}
+    - target: {fileID: 5623420197574010572, guid: 92e5d064a4d689249ace2a0654dd4a8d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5623420197858853844, guid: 92e5d064a4d689249ace2a0654dd4a8d, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: e8e115abbf338224bbba19423bd5c42e, type: 3}
+      objectReference: {fileID: 21300000, guid: 1e819f75698abf94c92e894d0a213da4, type: 3}
     - target: {fileID: 5623420197858853845, guid: 92e5d064a4d689249ace2a0654dd4a8d, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 35
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 5623420197858853845, guid: 92e5d064a4d689249ace2a0654dd4a8d, type: 3}
       propertyPath: m_SizeDelta.y
@@ -16711,7 +16751,11 @@ PrefabInstance:
     - target: {fileID: 5623420197040761633, guid: 92e5d064a4d689249ace2a0654dd4a8d, type: 3}
       propertyPath: tower
       value: 
-      objectReference: {fileID: 11400000, guid: 2d2799657dbbe6d488674c4907b5142d, type: 2}
+      objectReference: {fileID: 11400000, guid: e3601769e111e8b4a99b67086d1e3d0d, type: 2}
+    - target: {fileID: 5623420197040761633, guid: 92e5d064a4d689249ace2a0654dd4a8d, type: 3}
+      propertyPath: isLocked
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5623420197040761633, guid: 92e5d064a4d689249ace2a0654dd4a8d, type: 3}
       propertyPath: playerController
       value: 
@@ -16722,7 +16766,7 @@ PrefabInstance:
       objectReference: {fileID: 1181122193}
     - target: {fileID: 5623420197040761634, guid: 92e5d064a4d689249ace2a0654dd4a8d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5623420197040761634, guid: 92e5d064a4d689249ace2a0654dd4a8d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -16747,10 +16791,22 @@ PrefabInstance:
     - target: {fileID: 5623420197040761634, guid: 92e5d064a4d689249ace2a0654dd4a8d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 11400000, guid: 2d2799657dbbe6d488674c4907b5142d, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 5623420197040761634, guid: 92e5d064a4d689249ace2a0654dd4a8d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: TDTO.TowerSO, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5623420197040761636, guid: 92e5d064a4d689249ace2a0654dd4a8d, type: 3}
+      propertyPath: m_Color.b
+      value: 0.3490566
+      objectReference: {fileID: 0}
+    - target: {fileID: 5623420197040761636, guid: 92e5d064a4d689249ace2a0654dd4a8d, type: 3}
+      propertyPath: m_Color.g
+      value: 0.23182628
+      objectReference: {fileID: 0}
+    - target: {fileID: 5623420197040761636, guid: 92e5d064a4d689249ace2a0654dd4a8d, type: 3}
+      propertyPath: m_Color.r
+      value: 0.20251869
       objectReference: {fileID: 0}
     - target: {fileID: 5623420197040761637, guid: 92e5d064a4d689249ace2a0654dd4a8d, type: 3}
       propertyPath: m_Pivot.x
@@ -16844,10 +16900,14 @@ PrefabInstance:
       propertyPath: m_text
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 5623420197574010572, guid: 92e5d064a4d689249ace2a0654dd4a8d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5623420197858853844, guid: 92e5d064a4d689249ace2a0654dd4a8d, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: f60745c740aea1e4383c8e2541b077f9, type: 3}
+      objectReference: {fileID: 21300000, guid: 1e819f75698abf94c92e894d0a213da4, type: 3}
     - target: {fileID: 5623420197858853845, guid: 92e5d064a4d689249ace2a0654dd4a8d, type: 3}
       propertyPath: m_SizeDelta.x
       value: 60
