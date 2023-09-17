@@ -78,6 +78,9 @@ namespace TDTO
             leftUpgradeDescription.text = t.so.leftUpgrade.upgradeDescription;
             leftUpgradeManaCost.text = t.so.leftUpgrade.manaCost + " mana";
 
+            rightUpgradeButton.image.sprite = t.rightUpgradeBought ? soldButton : buyButton;
+            rightUpgradeButton.interactable = !t.rightUpgradeBought;
+
             rightUpgradeName.text = t.so.rightUpgrade.upgradeName;
             rightUpgradeDescription.text = t.so.rightUpgrade.upgradeDescription;
             rightUpgradeManaCost.text = t.so.rightUpgrade.manaCost + " mana";
@@ -117,6 +120,14 @@ namespace TDTO
 
         private void ApplyUpgrade(Upgrade upgrade)
         {
+            if (upgradeTower.map == playerController.playerMap)
+            {
+                playerController.manaGainPerSecond += upgrade.additionalIncome;
+            }
+
+            upgradeTower.badge.enabled = true;
+            upgradeTower.badge.sprite = (upgradeTower.rightUpgradeBought && upgradeTower.leftUpgradeBought) ? upgradeTower.bothBadge : (upgradeTower.leftUpgradeBought ? upgradeTower.leftBadge : upgradeTower.rightBadge);
+
             upgradeTower.rangeDisplay += upgrade.additionalRange;
 
             Turret turret = upgradeTower.GetComponent<Turret>();

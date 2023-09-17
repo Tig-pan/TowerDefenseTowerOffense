@@ -26,18 +26,26 @@ MonoBehaviour:
     manaCost: 10
     moveSpeedMulti: 1
     fireRateMulti: 1.4
+    dpsMulti: 1
     additionalMaxHealth: 0
     additionalArmor: 0
     additionalRange: 0.5
+    additionalIncome: 0
+    slowImmune: 0
+    slowResistance: 0
     newProjectile: {fileID: 0}
   rightUpgrade:
-    upgradeName: Protein Potion
+    upgradeName: Protein Potions
     upgradeDescription: Increases the armour and max health of the tower while on
       offense.
     manaCost: 10
     moveSpeedMulti: 1
     fireRateMulti: 1
+    dpsMulti: 1
     additionalMaxHealth: 5
     additionalArmor: 1
     additionalRange: 0
+    additionalIncome: 0
+    slowImmune: 0
+    slowResistance: 0
     newProjectile: {fileID: 0}

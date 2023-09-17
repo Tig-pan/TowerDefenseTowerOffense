@@ -14,10 +14,13 @@ namespace TDTO
         [Space(20)]
         public float moveSpeedMulti = 1.0f;
         public float fireRateMulti = 1.0f;
+        public float dpsMulti = 1.0f;
         public int additionalMaxHealth = 0;
         public int additionalArmor = 0;
         public float additionalRange = 0.0f;
+        public float additionalIncome = 0.0f;
         public bool slowImmune;
+        public bool slowResistance;
         public Projectile newProjectile;
     }
 

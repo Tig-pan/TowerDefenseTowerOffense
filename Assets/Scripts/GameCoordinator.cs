@@ -14,7 +14,7 @@ namespace TDTO
         public AudioClip nightMusic;
         public AudioClip dayMusic;
 
-        public float currentTime = 37.5f; // 45 == enemy send, 15 = player send
+        public float currentTime = 35f; // 45 == enemy send, 15 = player send
         public float timeScale = 0.5f;
 
         private int enemySends = 0;

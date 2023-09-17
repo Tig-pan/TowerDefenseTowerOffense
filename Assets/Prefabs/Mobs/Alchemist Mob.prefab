@@ -98,16 +98,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f6f3fdba5e724c42b0b48e6d9662f8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
-  maxHealth: 20
+  health: 25
+  maxHealth: 25
   speed: 0.7
-  dps: 1
+  dps: 1.5
+  finalCastleDps: 1.5
   armor: 0
   map: {fileID: 0}
   currentWaypointIndex: 0
   currentDistanceFrac: 0
   nextMap: {fileID: 0}
   deathEffect: {fileID: 0}
+  healthBar: {fileID: 8335446949017816116}
   healthFill: {fileID: 5307901157692864297}
   isBlocked: 0
   slowTimer: 0

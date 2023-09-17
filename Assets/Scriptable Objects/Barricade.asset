@@ -26,20 +26,26 @@ MonoBehaviour:
     manaCost: 10
     moveSpeedMulti: 1
     fireRateMulti: 1
+    dpsMulti: 1
     additionalMaxHealth: 0
     additionalArmor: 0
     additionalRange: 0
+    additionalIncome: 0
     slowImmune: 0
+    slowResistance: 0
     newProjectile: {fileID: 0}
   rightUpgrade:
     upgradeName: Battering Ram
-    upgradeDescription: Gains a increase in speed and small amount of armor while
+    upgradeDescription: Gains an increase in speed and a small amount of armor while
       on offense.
     manaCost: 5
     moveSpeedMulti: 1.25
     fireRateMulti: 1
+    dpsMulti: 1
     additionalMaxHealth: 0
     additionalArmor: 1
     additionalRange: 0
+    additionalIncome: 0
     slowImmune: 0
+    slowResistance: 0
     newProjectile: {fileID: 0}

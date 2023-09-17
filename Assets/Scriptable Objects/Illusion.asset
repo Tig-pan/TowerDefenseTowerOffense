@@ -29,15 +29,19 @@ MonoBehaviour:
     additionalMaxHealth: 0
     additionalArmor: 0
     additionalRange: 1
+    additionalIncome: 0
+    slowImmune: 0
     newProjectile: {fileID: 0}
   rightUpgrade:
     upgradeName: Energetic Trance
     upgradeDescription: Doubles the strength of the healing inspiration aura. Also
-      increases max health but reduces move speed.
+      increases max health but reduces move speed slightly.
     manaCost: 15
     moveSpeedMulti: 0.9
     fireRateMulti: 1
     additionalMaxHealth: 10
     additionalArmor: 0
     additionalRange: 0
+    additionalIncome: 0
+    slowImmune: 0
     newProjectile: {fileID: 0}

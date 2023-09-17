@@ -10,6 +10,7 @@ namespace TDTO
         public float maxHealth;
         public bool isFinalCastle;
         [Space(5)]
+        public GameObject healthBar;
         public Transform healthFill;
 
         private static readonly float DefaultBlockingDistance = 0.5f;
@@ -30,7 +31,7 @@ namespace TDTO
                     else
                     {
                         int healthBefore = (int)health;
-                        health -= currentlyBlocking[i].dps * Time.deltaTime;
+                        health -= (isFinalCastle ? currentlyBlocking[i].finalCastleDps : currentlyBlocking[i].dps) * Time.deltaTime;
                         int healthAfter = (int)health;
 
                         if (leftUpgradeBought && healthAfter != healthBefore) // spikes/thorns
@@ -53,7 +54,7 @@ namespace TDTO
                 for (int i = 0; i < map.enemyMobs.Count; i++)
                 {
                     Mob mob = map.enemyMobs[i];
-                    if (!mob.isBlocked && Vector3.Distance(mob.transform.position, transform.position) < blockingDistance)
+                    if (mob != null && !mob.isBlocked && Vector3.Distance(mob.transform.position, transform.position) < blockingDistance)
                     {
                         mob.isBlocked = true;
                         currentlyBlocking.Add(mob);
@@ -62,9 +63,22 @@ namespace TDTO
             }
         }
 
+        public void Release()
+        {
+            health = maxHealth;
+
+            for (int i = 0; i < currentlyBlocking.Count; i++)
+            {
+                currentlyBlocking[i].isBlocked = false;
+            }
+            currentlyBlocking.Clear();
+
+            healthBar.SetActive(true);
+        }
+
         void OnDeath()
         {
-            healthFill.gameObject.SetActive(false);
+            healthBar.SetActive(false);
             for (int i = 0; i < currentlyBlocking.Count; i++)
             {
                 currentlyBlocking[i].isBlocked = false;

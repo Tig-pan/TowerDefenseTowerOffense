@@ -102,12 +102,14 @@ MonoBehaviour:
   maxHealth: 25
   speed: 1.7
   dps: 3
+  finalCastleDps: 3
   armor: 0
   map: {fileID: 0}
   currentWaypointIndex: 0
   currentDistanceFrac: 0
   nextMap: {fileID: 0}
   deathEffect: {fileID: 0}
+  healthBar: {fileID: 7262054624824393585}
   healthFill: {fileID: 6830842535470629996}
   isBlocked: 0
   slowTimer: 0

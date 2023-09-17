@@ -24,6 +24,7 @@ namespace TDTO
                 {
                     Barricade barricade = (Barricade)towers[i];
                     barricade.health = barricade.maxHealth;
+                    barricade.Release();
                 }
 
                 Mob newMob = Instantiate(towers[i].mobVersion);

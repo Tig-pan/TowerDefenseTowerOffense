@@ -11,6 +11,7 @@ namespace TDTO
         public int maxHealth;
         public float speed;
         public float dps;
+        public float finalCastleDps;
         public int armor;
         [Space(5)]
         public MapController map;
@@ -19,6 +20,7 @@ namespace TDTO
         public MapController nextMap;
         [Space(5)]
         public GameObject deathEffect;
+        public GameObject healthBar;
         public Transform healthFill;
         [Space(5)]
         public bool isBlocked;
@@ -31,6 +33,7 @@ namespace TDTO
         private Vector3 retreatPosition;
         private float retreatIndex;
 
+        private bool isSlowResistant;
         private bool isSlowImmune;
 
         [HideInInspector()]
@@ -54,10 +57,12 @@ namespace TDTO
                 health += pairedTower.so.leftUpgrade.additionalMaxHealth;
                 maxHealth += pairedTower.so.leftUpgrade.additionalMaxHealth;
 
+                dps *= pairedTower.so.leftUpgrade.dpsMulti;
                 speed *= pairedTower.so.leftUpgrade.moveSpeedMulti;
                 armor += pairedTower.so.leftUpgrade.additionalArmor;
 
                 isSlowImmune = isSlowImmune || pairedTower.so.leftUpgrade.slowImmune;
+                isSlowResistant = isSlowResistant || pairedTower.so.leftUpgrade.slowResistance;
             }
 
             if (pairedTower.rightUpgradeBought)
@@ -65,11 +70,16 @@ namespace TDTO
                 health += pairedTower.so.rightUpgrade.additionalMaxHealth;
                 maxHealth += pairedTower.so.rightUpgrade.additionalMaxHealth;
 
+                dps *= pairedTower.so.rightUpgrade.dpsMulti;
                 speed *= pairedTower.so.rightUpgrade.moveSpeedMulti;
                 armor += pairedTower.so.rightUpgrade.additionalArmor;
 
-                healing.amountToHeal *= 2;
+                if (healing != null)
+                {
+                    healing.amountToHeal *= 2;
+                }
                 isSlowImmune = isSlowImmune || pairedTower.so.rightUpgrade.slowImmune;
+                isSlowResistant = isSlowResistant || pairedTower.so.rightUpgrade.slowResistance;
             }
 
             for (int i = 0; i < map.movementWaypoints.Length - 1; i++)
@@ -117,7 +127,7 @@ namespace TDTO
             currentWaypointIndex = Mathf.Max(currentWaypointIndex - 1, 0);
 
             nextMap = mapToRetreatTo;
-            healthFill.gameObject.SetActive(false);
+            healthBar.SetActive(false);
         }
 
         bool IsPointOnLineSegment(Vector3 point, Vector3 a, Vector3 b)
@@ -181,18 +191,12 @@ namespace TDTO
             float delta = speed * Time.deltaTime * (map != nextMap && !isRetreating ? 1.75f : 1.0f) * (slowTimer > 0.0f && !isSlowImmune ? slowSpeed : 1.0f);
             if (isRetreating)
             {
-                if (currentWaypointIndex > retreatIndex)
+                if (currentWaypointIndex > retreatIndex && map == nextMap)
                 {
                     if (Vector3.Distance(transform.position, retreatPosition) < delta)
                     {
                         Destroy(this.gameObject);
                         originalTower.gameObject.SetActive(true);
-
-                        Barricade original = originalTower.GetComponent<Barricade>();
-                        if (original)
-                        {
-                            original.health = original.maxHealth;
-                        }
                     }
                     else
                     {
