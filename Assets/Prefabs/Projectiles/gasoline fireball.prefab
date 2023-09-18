@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   map: {fileID: 0}
-  splashEffect: {fileID: 0}
+  splashEffect: {fileID: 2775641906520041568, guid: a3e487717bb8b114db11cb0111e60d73, type: 3}
   damage: 5
   maxSplashTargets: 5
   splashRadius: 1.2

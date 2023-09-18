@@ -2143,7 +2143,7 @@ MonoBehaviour:
   gameMusic: {fileID: 343461085}
   deathMusic: {fileID: 8300000, guid: 8e91ca79bd67b6a41b983e4b4f17d0de, type: 3}
   winMusic: {fileID: 8300000, guid: 265620dd98f535e4caf985a84ca5f303, type: 3}
-  finalBossMusic: {fileID: 0}
+  finalBossMusic: {fileID: 8300000, guid: 5fedf8f41b08e794c8dcd81c2946b31d, type: 3}
   deathScene: MainMenu
   winScene: MainMenu
   nextLevelIndex: 0
