@@ -2446,6 +2446,9 @@ MonoBehaviour:
   rightUpgradeBought: 0
   health: 20
   maxHealth: 20
+  healthy: {fileID: 0}
+  dead: {fileID: 0}
+  sprite: {fileID: 0}
   isFinalCastle: 1
   healthBar: {fileID: 977855514}
   healthFill: {fileID: 105341752}
@@ -14458,6 +14461,9 @@ MonoBehaviour:
   rightUpgradeBought: 0
   health: 9999999
   maxHealth: 9999999
+  healthy: {fileID: 0}
+  dead: {fileID: 0}
+  sprite: {fileID: 0}
   isFinalCastle: 1
   healthBar: {fileID: 1706036335}
   healthFill: {fileID: 1946347999}
