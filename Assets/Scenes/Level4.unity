@@ -589,6 +589,7 @@ MonoBehaviour:
   - {fileID: 1450277554}
   - {fileID: 1376984140}
   - {fileID: 401839527}
+  castle: {fileID: 1729386032}
   towers: []
   enemyMobs: []
 --- !u!4 &95827555
@@ -1159,6 +1160,7 @@ MonoBehaviour:
   - {fileID: 1768974380}
   - {fileID: 1766097190}
   - {fileID: 2011856842}
+  castle: {fileID: 101416842}
   towers:
   - {fileID: 765612071}
   - {fileID: 1721239324}
@@ -2143,7 +2145,7 @@ MonoBehaviour:
   gameMusic: {fileID: 343461085}
   deathMusic: {fileID: 8300000, guid: 8e91ca79bd67b6a41b983e4b4f17d0de, type: 3}
   winMusic: {fileID: 8300000, guid: 265620dd98f535e4caf985a84ca5f303, type: 3}
-  finalBossMusic: {fileID: 0}
+  finalBossMusic: {fileID: 8300000, guid: 5fedf8f41b08e794c8dcd81c2946b31d, type: 3}
   deathScene: MainMenu
   winScene: MainMenu
   nextLevelIndex: 0
@@ -7620,7 +7622,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35.05
+  m_fontSize: 35.1
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

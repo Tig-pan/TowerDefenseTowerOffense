@@ -8,6 +8,7 @@ namespace TDTO
     {
         public MapController otherMap;
         public Transform[] movementWaypoints;
+        public Barricade castle;
         public List<Tower> towers = new List<Tower>();
         public List<Mob> enemyMobs = new List<Mob>();
 
@@ -17,6 +18,8 @@ namespace TDTO
             {
                 enemyMobs[i].Retreat(otherMap);
             }
+
+            castle.Release(false);
 
             for (int i = 0; i < towers.Count; i++)
             {

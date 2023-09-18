@@ -66,22 +66,25 @@ namespace TDTO
             }
         }
 
-        public void Release()
+        public void Release(bool resetHealth = true)
         {
-            health = maxHealth;
+            if (resetHealth)
+            {
+                health = maxHealth;
+
+                healthBar.SetActive(true);
+                healthFill.transform.localScale = new Vector3(1, 1, 1);
+                if (sprite != null)
+                {
+                    sprite.sprite = healthy;
+                }
+            }
 
             for (int i = 0; i < currentlyBlocking.Count; i++)
             {
                 currentlyBlocking[i].isBlocked = false;
             }
             currentlyBlocking.Clear();
-
-            healthBar.SetActive(true);
-            healthFill.transform.localScale = new Vector3(1, 1, 1);
-            if (sprite != null)
-            {
-                sprite.sprite = healthy;
-            }
         }
 
         void OnDeath()

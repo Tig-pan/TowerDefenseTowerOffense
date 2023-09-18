@@ -1002,6 +1002,7 @@ MonoBehaviour:
   - {fileID: 477008383}
   - {fileID: 443607701}
   - {fileID: 1849318100}
+  castle: {fileID: 534783796}
   towers: []
   enemyMobs: []
 --- !u!4 &148115751
@@ -21102,6 +21103,7 @@ MonoBehaviour:
   - {fileID: 1762757120}
   - {fileID: 1938181648}
   - {fileID: 653949920}
+  castle: {fileID: 1266860403}
   towers:
   - {fileID: 1089642589}
   - {fileID: 737712686}
@@ -21933,7 +21935,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35.05
+  m_fontSize: 35.1
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

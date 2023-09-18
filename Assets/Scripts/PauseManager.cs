@@ -36,6 +36,7 @@ namespace TDTO
 
         public void MainMenu()
         {
+            Time.timeScale = 1.0f;
             SceneManager.LoadScene("MainMenu");
         }
 

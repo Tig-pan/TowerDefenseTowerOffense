@@ -299,7 +299,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35.05
+  m_fontSize: 35.1
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -548,6 +548,7 @@ MonoBehaviour:
   - {fileID: 99999165}
   - {fileID: 2136260416}
   - {fileID: 1654933963}
+  castle: {fileID: 201516879}
   towers:
   - {fileID: 1579712596}
   - {fileID: 261843646}
@@ -9361,6 +9362,7 @@ MonoBehaviour:
   - {fileID: 1189121251}
   - {fileID: 6648798}
   - {fileID: 829713454}
+  castle: {fileID: 1303351802}
   towers: []
   enemyMobs: []
 --- !u!4 &492852583

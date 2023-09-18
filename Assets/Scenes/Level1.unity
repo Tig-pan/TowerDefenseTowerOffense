@@ -6624,6 +6624,7 @@ MonoBehaviour:
   - {fileID: 1447883349}
   - {fileID: 1519555342}
   - {fileID: 158455358}
+  castle: {fileID: 625751266}
   towers: []
   enemyMobs: []
 --- !u!4 &915500096
@@ -15637,7 +15638,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1276198021
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16462,7 +16463,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35.05
+  m_fontSize: 35.1
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -16775,6 +16776,7 @@ MonoBehaviour:
   - {fileID: 1594913665}
   - {fileID: 872844058}
   - {fileID: 107384890}
+  castle: {fileID: 773454857}
   towers:
   - {fileID: 489963389}
   - {fileID: 1976993264}
