@@ -4668,6 +4668,7 @@ MonoBehaviour:
   - {fileID: 499322273}
   - {fileID: 208912095}
   - {fileID: 72950294}
+  castle: {fileID: 2114962379}
   towers:
   - {fileID: 1231875680}
   - {fileID: 1711284582}
@@ -5329,6 +5330,7 @@ MonoBehaviour:
   - {fileID: 692049407}
   - {fileID: 1228239598}
   - {fileID: 1085336977}
+  castle: {fileID: 787008179}
   towers:
   - {fileID: 230965484}
   - {fileID: 1935828389}
